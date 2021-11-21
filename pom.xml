@@ -14,7 +14,7 @@
     <name>i18n</name>
     <description>i18n</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
         <repackage.classifier/>
         <spring-native.version>0.10.5</spring-native.version>
         <common.web.version>1.0.0</common.web.version>

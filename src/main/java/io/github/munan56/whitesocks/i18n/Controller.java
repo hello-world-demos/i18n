@@ -1,8 +1,11 @@
 package io.github.munan56.whitesocks.i18n;
 
 import io.github.munan56.whitesocks.common.core.model.Response;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/")
@@ -19,7 +22,7 @@ public class Controller {
     }
 
     @RequestMapping("/hiber")
-    public Response<Boolean> hiber(UserInput userInput){
+    public Response<Boolean> hiber(@RequestBody @Valid UserInput userInput){
         return Response.no(I18nErrors.ID_IS_NOT_ALLOWED2,"换一个Id","或者联系管理员");
     }
 
